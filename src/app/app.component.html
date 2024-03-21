@@ -16,25 +16,14 @@
 />
 
 <!-- PAGE STUFF -->
-<div class="rela-block page">
+<button (click)="getHtml()">HTML TO PDF</button>
+<div class="rela-block page" *ngIf="PDFGEN">
   <div class="rela-block top-bar">
     <div class="caps name">
       <div class="abs-center">{{ data.name }}</div>
     </div>
   </div>
   <div class="side-bar">
-    <div class="mugshot">
-      <div class="logo">
-        <svg viewbox="0 0 80 80" class="rela-block logo-svg">
-          <path
-            d="M 10 10 L 52 10 L 72 30 L 72 70 L 30 70 L 10 50 Z"
-            stroke-width="2.5"
-            fill="none"
-          />
-        </svg>
-        <p class="logo-text">{{ data.logoText }}</p>
-      </div>
-    </div>
     <p>{{ data.address1 }}</p>
     <p>{{ data.address2 }}</p>
     <p>{{ data.mobile }}</p>
@@ -78,3 +67,5 @@
    
   </div>
 </div>
+<iframe width="100%" height="100%" [src]="src" *ngIf="!PDFGEN" frameborder="0"></iframe>
+

@@ -107,7 +107,7 @@
   }
   .name div {
     width: 94%;
-    font-size: 44px;
+    font-size: 34px;
   }
   .side-bar {
     display: false;
@@ -117,9 +117,9 @@
     left: 5%;
     right: false;
     bottom: 0;
-    width: 350px;
+    width: 225px;
     background-color: #f7e0c1;
-    padding: 320px 30px 50px;
+    padding: 162px 30px 50px;
   }
   .mugshot {
     display: false;
@@ -211,7 +211,7 @@
   }
   .content-container {
     margin-right: 0;
-    width: calc(95% - 350px);
+    width: calc(95% - 195px);
     padding: 25px 40px 50px;
   }
   .content-container > * {

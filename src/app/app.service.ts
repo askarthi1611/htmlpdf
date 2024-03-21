@@ -11,7 +11,9 @@ export class AppService {
   
   constructor(private http: HttpClient) {}
   postpdfData(data: any): Observable<any> {
+
     const headers = new HttpHeaders({ 'Content-Type': 'application/json' });
-    return this.http.post<any>(`${this.apiUrl}/savepdf`, data, { headers });
+    
+    return this.http.post<any>(`${this.apiUrl}/savehtmlpdf`, data, { headers });
   }
 }
